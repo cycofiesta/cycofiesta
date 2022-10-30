@@ -1,9 +1,11 @@
 html {
     scroll-behavior: smooth;
+    cursor: url("assets/cursor-02.svg") 20 20, auto;
 }
 
 body {
-    background: #122900;
+    background: linear-gradient(#000F02, #122900);
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -34,33 +36,61 @@ body a {
     justify-content: center;
     width: 100%;
     margin-top: 20px;
+    cursor: url("assets/cursor-02.svg") 20 20, auto;
     max-width: 100%;
 }
 
+.button a {
+    cursor: url("assets/cursor-02.svg") 20 20, auto;
+}
 
 .button-class {
     align-items: center;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    border-radius: 16px;
+    border: 0;
+    border-radius: 24px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: 'Gotham', serif;
     font-weight: bold;
     font-size: 36px;
+    justify-content: center;
     line-height: 1em;
     max-width: 100%;
     min-width: 140px;
     padding: 24px;
     text-decoration: none;
     user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
     position: relative;
+    text-align: center;
+    align-self: center;
+    cursor: url("assets/cursor-01.svg") 20 20, auto;
     width: 320px;
-
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    z-index: 2;
 }
 
+.button-class:active,
+.button-class:hover {
+    outline: 0;
+    background-image: linear-gradient(144deg, #00DDEB, #5B42F3 50%, #AF40FF);
+    cursor: url("assets/cursor-01.svg") 20 20, auto;
+}
 
 .text_div {
     position: relative;
+    color: rgba(240, 240, 240, 0.7);
     font-size: 30px;
     margin-left: 100px;
     margin-right: 100px;
+    font-family: 'Gotham', sans-serif;
     font-weight: 500;
     margin-top: 80px;
     z-index: 2;
@@ -70,8 +100,11 @@ body a {
     position: relative;
     display: flex;
     justify-content: center;
+    color: #fff;
     width: 100%;
     font-size: 30px;
+    font-family: 'Gotham';
+    font-weight: 900;
     height: auto;
 }
 
@@ -81,18 +114,24 @@ body a {
     justify-content: center;
     text-align: center;
     align-self: center;
+    margin-bottom: 100px;
 }
 
 .sponsor-image {
     height: 120px;
     display: flex;
+    border-radius: 36px;
+    background: #ffffff88;
     padding: 36px;
+
 }
 
 
 .creds {
     font-size: 30px;
+    color: rgb(137, 183, 126);
     text-align: center;
+    font-family: 'Gotham';
     font-weight: 500;
     height: 80px;
 }
