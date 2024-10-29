@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/icon.png">
     <title>CycoFiesta</title>
@@ -15,6 +17,56 @@
         <div class="cyco">
             <img src="assets/title.png" class="cyco-logo">
         </div>
+
+
+
+        <div class="countdown">
+            <div>
+                <p id="day"></p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hour"></p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="min"></p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="sec"></p>
+                <span>Seconds</span>
+            </div>
+        </div>
+
+        <script>
+            var countDownDate = new Date("Feb 25, 2023 12:00:00").getTime();
+
+            var x = setInterval(function () {
+
+                var now = new Date().getTime();
+
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24)).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("hour").innerHTML = hours;
+                document.getElementById("min").innerHTML = minutes;
+                document.getElementById("sec").innerHTML = seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("day").innerHTML = "00";
+                    document.getElementById("hour").innerHTML = "00";
+                    document.getElementById("min").innerHTML = "00";
+                    document.getElementById("sec").innerHTML = "00";
+                }
+            }, 1000);
+        </script>
 
         <div class="button">
             <a href="#our-sponsor">
