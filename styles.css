@@ -6,6 +6,7 @@ html {
     cursor: url("assets/cursor-02.svg") 20 20, auto;
 }
 
+
 body {
     background: linear-gradient(#000F02, #122900);
     overflow-x: hidden;
